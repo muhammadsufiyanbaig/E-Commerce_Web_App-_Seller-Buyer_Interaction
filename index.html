@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <button onclick="setMode('seller')">Seller Mode</button>
+  <button onclick="setMode('buyer')">Buyer Mode</button>
+
+  <div class="seller-mode">
+    <h1>Seller Mode</h1>
+    <input type="file" id="productImage" accept="image/*">
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="text" id="productDescription" placeholder="Product Description">
+    <input type="number" id="productPrice" placeholder="Product Price">
+    <button onclick="addProduct()">Upload</button>
+  </div>
+
+  <div class="buyer-mode">
+    <h1>Buyer Mode</h1>
+    <div id="products"></div>
+
+  </div>
+
+  <div class="cart-icon" onclick="toggleCart()">🛒</div>
+
+  <div class="cart-content">
+    <h2>Shopping Cart</h2>
+    <div id="cartItems"></div>
+    <h3>Total: $<span id="totalPrice">0.00</span></h3>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
